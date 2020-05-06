@@ -35,12 +35,12 @@ if (!function_exists('pinyin_abbr')) {
      * Get the fist letters of given string.
      *
      * @param string $str
-     * @param string $delimiter
+     * @param string|int $delimiter
      * @param int $option
      * @param DictLoader|string|null $loader
      * @return string
      */
-    function pinyin_abbr(string $str, string $delimiter = '', int $option = Pinyin::DEFAULT, $loader = null)
+    function pinyin_abbr(string $str, $delimiter = '', int $option = Pinyin::DEFAULT, $loader = null)
     {
         return Pinyin::setLoader($loader)->abbr($str, $delimiter, $option);
     }
@@ -51,7 +51,7 @@ if (!function_exists('pinyin_permalink')) {
     /**
      * Get a pinyin permalink from string.
      * @param string $str
-     * @param string $delimiter
+     * @param string|int $delimiter
      * @param int $option
      * @param DictLoader|string|null $loader
      * @return string
@@ -67,7 +67,7 @@ if (!function_exists('pinyin_sentence')) {
      * Get the fist pinyin and letters of given string.
      *
      * @param string $string
-     * @param string $delimiter
+     * @param string|int $delimiter
      * @param int $option
      * @param DictLoader|string|null $loader
      * @return string
