@@ -8,35 +8,6 @@ Chinese to Pinyin translator for Laravel 7 based on [mucts/pinyin](https://githu
 composer require mucts/laravel-pinyin
 ```
 
-## For Laravel
-
-Add the following line to the section `providers` of `config/app.php`:
-
-```php
-'providers' => [
-    //...
-    MuCTS\LaravelPinyin\Providers\PinyinServiceProvider::class,
-]
-```
-
-as optional, you can use facade:
-
-```php
-
-'aliases' => [
-    //...
-    'Pinyin' => MuCTS\LaravelPinyin\Facades\Pinyin::class,
-],
-```
-
-## For Lumen
-
-Add the following line to `bootstrap/app.php` after `// $app->withEloquent();`
-
-```php
-$app->register(MuCTS\LaravelPinyin\Providers\PinyinServiceProvider::class);
-```
-
 ## Usage
 
 you can get the instance of `MuCTS\Pinyin\Pinyin` from app container:
