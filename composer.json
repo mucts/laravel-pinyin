@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "MuCTS\\LaravelPinyin\\": "src/"
+            "MuCTS\\Laravel\\Pinyin\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -32,10 +32,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MuCTS\\LaravelPinyin\\Providers\\PinyinServiceProvider"
+                "MuCTS\\Laravel\\Pinyin\\Providers\\PinyinServiceProvider"
             ],
             "aliases": {
-                "Pinyin": "MuCTS\\LaravelPinyin\\Facades\\Pinyin"
+                "Pinyin": "MuCTS\\Laravel\\Pinyin\\Facades\\Pinyin"
             }
         }
     }

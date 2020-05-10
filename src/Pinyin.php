@@ -10,14 +10,14 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelPinyin;
+namespace MuCTS\Laravel\Pinyin;
 
 use MuCTS\Pinyin\Pinyin as Accessor;
 
 /**
  * Class Pinyin
  * @mixin Accessor
- * @package MuCTS\LaravelPinyin
+ * @package MuCTS\Laravel\Pinyin
  */
 class Pinyin extends Accessor
 {

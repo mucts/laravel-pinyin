@@ -11,7 +11,7 @@
  */
 
 
-use MuCTS\LaravelPinyin\Facades\Pinyin;
+use MuCTS\Laravel\Pinyin\Facades\Pinyin;
 use MuCTS\Pinyin\Interfaces\DictLoader;
 
 if (!function_exists('pinyin')) {

@@ -10,11 +10,11 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelPinyin\Providers;
+namespace MuCTS\Laravel\Pinyin\Providers;
 
 
 use Illuminate\Support\ServiceProvider;
-use MuCTS\LaravelPinyin\Pinyin;
+use MuCTS\Laravel\Pinyin\Pinyin;
 
 class PinyinServiceProvider extends ServiceProvider
 {

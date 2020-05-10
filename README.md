@@ -15,7 +15,7 @@ Add the following line to the section `providers` of `config/app.php`:
 ```php
 'providers' => [
     //...
-    MuCTS\LaravelPinyin\Providers\PinyinServiceProvider::class,
+    MuCTS\Laravel\Pinyin\Providers\PinyinServiceProvider::class,
 ]
 ```
 
@@ -25,7 +25,7 @@ as optional, you can use facade:
 
 'aliases' => [
     //...
-    'Pinyin' => MuCTS\LaravelPinyin\Facades\Pinyin::class,
+    'Pinyin' => MuCTS\Laravel\Pinyin\Facades\Pinyin::class,
 ],
 ```
 
@@ -34,7 +34,7 @@ as optional, you can use facade:
 Add the following line to `bootstrap/app.php` after `// $app->withEloquent();`
 
 ```php
-$app->register(MuCTS\LaravelPinyin\Providers\PinyinServiceProvider::class);
+$app->register(MuCTS\Laravel\Pinyin\Providers\PinyinServiceProvider::class);
 ```
 
 ## Usage

@@ -10,16 +10,16 @@
  * @copyright © 2020 MuCTS.com All Rights Reserved.
  */
 
-namespace MuCTS\LaravelPinyin\Facades;
+namespace MuCTS\Laravel\Pinyin\Facades;
 
 
 use Illuminate\Support\Facades\Facade;
-use MuCTS\LaravelPinyin\Pinyin as Accessor;
+use MuCTS\Laravel\Pinyin\Pinyin as Accessor;
 
 /**
  * Class Pinyin
  * @mixin Accessor
- * @package MuCTS\LaravelPinyin\Facades
+ * @package MuCTS\Laravel\Pinyin\Facades
  */
 class Pinyin extends Facade
 {
