@@ -13,10 +13,11 @@
 namespace MuCTS\Laravel\Pinyin\Providers;
 
 
+use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use MuCTS\Laravel\Pinyin\Pinyin;
 
-class PinyinServiceProvider extends ServiceProvider
+class PinyinServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     public function register()
     {
