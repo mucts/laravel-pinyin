@@ -38,7 +38,9 @@ class Pinyin extends Accessor
      */
     public function setLoader($loader = null)
     {
+        $loader = $loader ?? Arr::get($this->config, 'default');
         $loader = is_string($loader) ? Arr::get($this->config, 'loaders.' . $loader, $loader) : $loader;
-        return parent::setLoader($loader);
+        parent::setLoader($loader);
+        return $this;
     }
 }
