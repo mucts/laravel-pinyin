@@ -26,9 +26,9 @@ class Pinyin extends Accessor
     {
         $path = null;
         if (is_array($loader)) {
-            $path = Arr::get($loader,'loaders.data');
-            $loader = Arr::get($loader,'loaders.default');
+            $path = Arr::get($loader, 'loaders.data');
+            $loader = Arr::get($loader, 'loaders.default');
         }
-        parent::__construct($loader,$path);
+        parent::__construct($loader, $path);
     }
 }
