@@ -1,6 +1,14 @@
 # laravel-pinyin
 Chinese to Pinyin translator for Laravel 7 based on [mucts/pinyin](https://github.com/mucts/pinyin).
 
+[![Build Status](https://scrutinizer-ci.com/g/mucts/laravel-pinyin/badges/build.png)](https://scrutinizer-ci.com/g/mucts/laravel-pinyin)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/mucts/laravel-pinyin/badges/code-intelligence.svg)](https://scrutinizer-ci.com/g/mucts/laravel-pinyin)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/mucts/laravel-pinyin/badges/quality-score.png)](https://scrutinizer-ci.com/g/mucts/laravel-pinyin)
+[![Latest Stable Version](https://poser.pugx.org/mucts/laravel-pinyin/v/stable.svg)](https://packagist.org/packages/mucts/laravel-pinyin) 
+[![Total Downloads](https://poser.pugx.org/mucts/laravel-pinyin/downloads.svg)](https://packagist.org/packages/mucts/laravel-pinyin) 
+[![Latest Unstable Version](https://poser.pugx.org/mucts/laravel-pinyin/v/unstable.svg)](https://packagist.org/packages/mucts/laravel-pinyin) 
+[![License](https://poser.pugx.org/mucts/laravel-pinyin/license.svg)](https://packagist.org/packages/mucts/laravel-pinyin)
+
 
 ## Install
 
