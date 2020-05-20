@@ -17,7 +17,6 @@ use MuCTS\Pinyin\Pinyin as Accessor;
 
 /**
  * Class Pinyin
- * @mixin Accessor
  * @package MuCTS\Laravel\Pinyin
  */
 class Pinyin extends Accessor
@@ -30,5 +29,13 @@ class Pinyin extends Accessor
             $loader = Arr::get($loader, 'loaders.default');
         }
         parent::__construct($loader, $path);
+    }
+
+    public function setLoader($loader = null): Accessor
+    {
+        if (is_null($loader)) {
+            return $this;
+        }
+        return Accessor::setLoader($loader);
     }
 }
