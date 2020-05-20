@@ -12,6 +12,7 @@
 
 namespace MuCTS\Laravel\Pinyin;
 
+use Illuminate\Support\Arr;
 use MuCTS\Pinyin\Pinyin as Accessor;
 
 /**
@@ -23,17 +24,11 @@ class Pinyin extends Accessor
 {
     public function __construct($loader = null)
     {
+        $path = null;
         if (is_array($loader)) {
-            $loader = $loader['loaders'][$loader['default']];
+            $path = Arr::get($loader,'loaders.data');
+            $loader = Arr::get($loader,'loaders.default');
         }
-        parent::__construct($loader);
-    }
-
-    public function setLoader($loader): Pinyin
-    {
-        if (!is_null($loader)) {
-            return new self($loader);
-        }
-        return $this;
+        parent::__construct($loader,$path);
     }
 }
