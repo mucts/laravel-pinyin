@@ -24,7 +24,7 @@ if (!function_exists('pinyin')) {
      * @return array
      * @author herry<yuandeng@aliyun.com>
      */
-    function pinyin(string $str, int $option = Pinyin::DEFAULT, $loader = null)
+    function pinyin(string $str, int $option = \MuCTS\Pinyin\Pinyin::DEFAULT, $loader = null)
     {
         return Pinyin::setLoader($loader)->convert($str, $option);
     }
@@ -40,7 +40,7 @@ if (!function_exists('pinyin_abbr')) {
      * @param DictLoader|string|null $loader
      * @return string
      */
-    function pinyin_abbr(string $str, $delimiter = '', int $option = Pinyin::DEFAULT, $loader = null)
+    function pinyin_abbr(string $str, $delimiter = '', int $option = \MuCTS\Pinyin\Pinyin::DEFAULT, $loader = null)
     {
         return Pinyin::setLoader($loader)->abbr($str, $delimiter, $option);
     }
@@ -56,7 +56,7 @@ if (!function_exists('pinyin_permalink')) {
      * @param DictLoader|string|null $loader
      * @return string
      */
-    function pinyin_permalink(string $str, $delimiter = '-', int $option = Pinyin::DEFAULT, $loader = null): string
+    function pinyin_permalink(string $str, $delimiter = '-', int $option = \MuCTS\Pinyin\Pinyin::DEFAULT, $loader = null): string
     {
         return Pinyin::setLoader($loader)->permalink($str, $delimiter, $option);
     }
@@ -72,8 +72,23 @@ if (!function_exists('pinyin_sentence')) {
      * @param DictLoader|string|null $loader
      * @return string
      */
-    function pinyin_sentence($string, $delimiter = ' ', $option = Pinyin::NO_TONE, $loader = null)
+    function pinyin_sentence($string, $delimiter = ' ', $option = \MuCTS\Pinyin\Pinyin::NO_TONE, $loader = null)
     {
         return Pinyin::setLoader($loader)->sentence($string, $delimiter, $option);
+    }
+}
+
+if (!function_exists('pinyin_name')) {
+    /**
+     * Convert string (person name) to pinyin.
+     *
+     * @param string $string
+     * @param int $option
+     * @param DictLoader|string|null $loader
+     * @return array
+     */
+    function pinyin_name(string $string, int $option = \MuCTS\Pinyin\Pinyin::NAME, $loader = null)
+    {
+        return Pinyin::setLoader($loader)->name($string, $option);
     }
 }
