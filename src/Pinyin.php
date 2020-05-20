@@ -13,6 +13,7 @@
 namespace MuCTS\Laravel\Pinyin;
 
 use Illuminate\Support\Arr;
+use MuCTS\Pinyin\Interfaces\DictLoader;
 use MuCTS\Pinyin\Pinyin as Accessor;
 
 /**
@@ -32,7 +33,7 @@ class Pinyin extends Accessor
     /**
      * Loader setter
      *
-     * @param null $loader
+     * @param DictLoader|string|null $loader
      * @return $this
      */
     public function setLoader($loader = null): self
