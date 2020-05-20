@@ -21,13 +21,28 @@ use MuCTS\Pinyin\Pinyin as Accessor;
  */
 class Pinyin extends Accessor
 {
-    public function __construct($loader = null)
+    private array $config;
+
+    public function __construct(?array $config = null)
     {
-        $path = null;
-        if (is_array($loader)) {
-            $path = Arr::get($loader, 'loaders.data');
-            $loader = Arr::get($loader, 'loaders.default');
+        $this->config = $config ?? Arr::wrap(config('pinyin'));
+        $path = $loader = null;
+        if (is_array($this->config)) {
+            $path = Arr::get($this->config, 'data');
+            $loader = Arr::get($this->config, 'default');
         }
         parent::__construct($loader, $path);
+    }
+
+    /**
+     * Loader setter
+     *
+     * @param null $loader
+     * @return $this
+     */
+    public function setLoader($loader = null): self
+    {
+        $loader = is_string($loader) ? Arr::get($this->config, 'loaders.' . $loader, $loader) : $loader;
+        return parent::setLoader($loader);
     }
 }
