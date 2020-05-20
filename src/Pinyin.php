@@ -30,12 +30,4 @@ class Pinyin extends Accessor
         }
         parent::__construct($loader, $path);
     }
-
-    public function setLoader($loader = null): Accessor
-    {
-        if (is_null($loader)) {
-            return $this;
-        }
-        return Accessor::setLoader($loader);
-    }
 }
