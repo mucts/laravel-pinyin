@@ -36,7 +36,7 @@ class Pinyin extends Accessor
      * @param DictLoader|string|null $loader
      * @return $this
      */
-    public function setLoader($loader = null): self
+    public function setLoader($loader = null)
     {
         $loader = is_string($loader) ? Arr::get($this->config, 'loaders.' . $loader, $loader) : $loader;
         return parent::setLoader($loader);
