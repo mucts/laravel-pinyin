@@ -26,12 +26,7 @@ class Pinyin extends Accessor
     public function __construct(?array $config = null)
     {
         $this->config = $config ?? Arr::wrap(config('pinyin'));
-        $path = $loader = null;
-        if (is_array($this->config)) {
-            $path = Arr::get($this->config, 'data');
-            $loader = Arr::get($this->config, 'default');
-        }
-        parent::__construct($loader, $path);
+        parent::__construct(Arr::get($this->config, 'default'), Arr::get($this->config, 'data'));
     }
 
     /**
