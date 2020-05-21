@@ -12,6 +12,7 @@
 
 namespace MuCTS\Laravel\Pinyin;
 
+use Exception;
 use Illuminate\Support\Arr;
 use MuCTS\Pinyin\Interfaces\DictLoader;
 use MuCTS\Pinyin\Pinyin as Accessor;
@@ -35,11 +36,12 @@ class Pinyin extends Accessor
      *
      * @param DictLoader|string|null $loader
      * @return $this
+     * @throws Exception
      */
     public function setLoader($loader = null)
     {
         $loader = $loader ?? Arr::get($this->config, 'default');
-        $loader = is_string($loader) ? Arr::get($this->config, 'loaders.' . $loader, $loader) : $loader;
+        $loader = is_string($loader) ? Arr::get($this->config, 'alias.' . $loader, $loader) : $loader;
         parent::setLoader($loader);
         return $this;
     }
